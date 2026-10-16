@@ -1,0 +1,307 @@
+{
+  "mode": "bounded_first_contiguous_dyad_prefix",
+  "key": {
+    "artist": "528068",
+    "producer": "761795"
+  },
+  "producer_rows": [
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "9457764",
+      "gid": "a744f9c5-d640-4bea-837f-74ded4bf65cf",
+      "year": "1994"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "9457765",
+      "gid": "7a6ceac2-fa9d-4f79-964f-3a2d0459c486",
+      "year": "2005"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "9457767",
+      "gid": "fca0760c-aca9-4e32-aaa3-2d28a4d9ec3a",
+      "year": "1994"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "9457769",
+      "gid": "036accc2-b763-4e4f-bd83-5e1cba8bcad1",
+      "year": "1994"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "9457771",
+      "gid": "1285d952-0fe4-4488-96a1-ad190f16c609",
+      "year": "2005"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "9457772",
+      "gid": "097349fe-79eb-40cf-bdb0-026279e617d2",
+      "year": "1994"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "9457774",
+      "gid": "a9300f68-1e24-46d6-ab0d-49b836750626",
+      "year": "2005"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "9457776",
+      "gid": "d09d2d74-88c7-434c-a92c-34577942b6a4",
+      "year": "2005"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "9457777",
+      "gid": "3d6fbc4c-100b-4b58-9d19-0ac57c1729e1",
+      "year": "2005"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "9457778",
+      "gid": "8c61d543-6399-4996-b022-5ec49f74ab0e",
+      "year": "2005"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "9457779",
+      "gid": "c7827439-913c-4878-9d0b-294467146001",
+      "year": "2005"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "31626896",
+      "gid": "ca400645-182f-4a38-928d-c477d294bd7e",
+      "year": "2008"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "31626900",
+      "gid": "763be71e-0956-4e7f-9020-f7f475f2b6a5",
+      "year": "2008"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "6635298",
+      "gid": "0c4e36c4-ac07-41fe-ae2c-6339dd1c1024",
+      "year": "1995"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "6635299",
+      "gid": "407b0910-7ee5-4a25-84a1-b33222291164",
+      "year": "1994"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "6635300",
+      "gid": "21d74661-75f9-4ba6-99b2-1c778d69d63f",
+      "year": "1995"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "6635301",
+      "gid": "cd34f600-2819-42ae-8d9d-7da63d6b8aa8",
+      "year": "1995"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "6635302",
+      "gid": "a93fea46-bf21-464e-893f-7274c6e139a8",
+      "year": "1995"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "6635303",
+      "gid": "0ecad415-3a8d-4d5e-9730-db619f0fcf08",
+      "year": "1995"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "9457743",
+      "gid": "d1b3e0ac-d9f1-4a68-b92f-9f7bdfb95a15",
+      "year": "2005"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "9457744",
+      "gid": "6426a3b8-0432-4528-bbeb-6125ddfd8545",
+      "year": "2005"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "9457745",
+      "gid": "59aa7750-1e61-48ba-92a4-253ba2f6b54b",
+      "year": "2005"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "9457746",
+      "gid": "a836c194-553e-4d9c-9390-e10ec6fa1cb9",
+      "year": "2005"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "9457747",
+      "gid": "86659076-7c9e-48d0-be91-b53162993472",
+      "year": "2005"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "rec": "9457748",
+      "gid": "89f21409-69d0-41b9-aef3-82bafb657b0d",
+      "year": "2005"
+    }
+  ],
+  "comparison_rows": [
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "t0": "1994",
+      "rec": "5572442",
+      "gid": "bb90f592-5cbd-4c20-a3a0-03eb6f7c7b2a",
+      "year": "1991",
+      "side": "1"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "t0": "1994",
+      "rec": "5572443",
+      "gid": "3435c09a-69df-45b8-bb60-3e04502fcbf2",
+      "year": "1991",
+      "side": "1"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "t0": "1994",
+      "rec": "5572444",
+      "gid": "031e9b3f-7fd2-478c-b4f8-5b99dda59ce6",
+      "year": "1991",
+      "side": "1"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "t0": "1994",
+      "rec": "5572446",
+      "gid": "ee4e4c08-a802-4f94-82d5-c8403de8eaf1",
+      "year": "1991",
+      "side": "1"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "t0": "1994",
+      "rec": "5572447",
+      "gid": "5654a212-c69e-4169-99ec-c8a3383da903",
+      "year": "1991",
+      "side": "1"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "t0": "1994",
+      "rec": "5572448",
+      "gid": "842b91b6-8984-41c7-a47d-b2e5e31c4c7c",
+      "year": "1991",
+      "side": "1"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "t0": "1994",
+      "rec": "5572449",
+      "gid": "874ac112-b124-4e48-bd92-885735bfe1d2",
+      "year": "1991",
+      "side": "1"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "t0": "1994",
+      "rec": "5572451",
+      "gid": "6dd16be2-246c-4c0b-bb9c-dfedda0a4bc3",
+      "year": "1991",
+      "side": "1"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "t0": "1994",
+      "rec": "5572452",
+      "gid": "29975fbb-a21f-483e-8f37-c8cbd0a9297b",
+      "year": "1991",
+      "side": "1"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "t0": "1994",
+      "rec": "5572453",
+      "gid": "12390851-7da2-46a1-9bc6-ac5d08d14fa2",
+      "year": "1991",
+      "side": "1"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "t0": "1994",
+      "rec": "5572455",
+      "gid": "7a090e5a-6162-4f15-bbf5-f706b9301b09",
+      "year": "1991",
+      "side": "1"
+    },
+    {
+      "artist": "528068",
+      "producer": "761795",
+      "t0": "1994",
+      "rec": "13624039",
+      "gid": "7059deee-c063-4e7f-b2c8-06ab164caba4",
+      "year": "1990",
+      "side": "1"
+    }
+  ],
+  "first_year_from_event": "1994",
+  "n_producer_rows": 25,
+  "n_comparison_rows": 12,
+  "n_distinct_producer_gids": 25,
+  "producer_year_counts": {
+    "1994": 5,
+    "1995": 5,
+    "2005": 13,
+    "2008": 2
+  },
+  "album_or_session_id_available": false,
+  "feature_complete_case_membership_tested": false,
+  "meaning": "Local metadata rows are real; old regression and acoustic values were not replayed; release-group and session identity absent in these CSVs."
+}

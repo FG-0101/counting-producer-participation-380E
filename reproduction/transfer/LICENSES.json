@@ -1,0 +1,26 @@
+{
+  "acousticbrainz": {
+    "license": "CC0",
+    "source": "https://acousticbrainz.org/",
+    "scope": "included AcousticBrainz feature and metadata values"
+  },
+  "numpy": {
+    "version": "2.5.3",
+    "distribution": "installed external dependency; not vendored"
+  },
+  "code": "No blanket code license was present in the source package. No new license grant is inferred.",
+  "musicbrainz": {
+    "attribution": "MusicBrainz and MetaBrainz Foundation",
+    "preserved_original_notice": "CC BY-NC-SA 3.0 for the supplementary relationship data",
+    "current_primary_classification": "Relationships are core data; core data is CC0",
+    "classification_source": "https://musicbrainz.org/doc/MusicBrainz_Database",
+    "license_source": "https://musicbrainz.org/doc/About/Data_License",
+    "historical_snapshot_status": "The exact upstream dump and original extraction history are absent from this processed-input package. The notice conflict has not been resolved for that historical snapshot."
+  },
+  "regulatory_reduction": {
+    "license": "CC BY 4.0 unless otherwise indicated",
+    "attribution": "European Commission, DSA Transparency Database",
+    "source": "https://transparency.dsa.ec.europa.eu/page/data-license?lang=en",
+    "transformation": "Canonicalized structured daily records into weighted cells and child lists. Weight counts source CSV record rows. Cell IDs are surrogate reduction keys."
+  }
+}

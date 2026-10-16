@@ -1,0 +1,902 @@
+[
+  {
+    "size": 100,
+    "maximum_child_count": 0,
+    "base_weight": 300,
+    "left_weight": 300,
+    "inner_weight": 0,
+    "eligible_weight": 0,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 300,
+      "preaggregate": 300,
+      "semijoin": 0,
+      "inner": 0,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        1.995917409658432e-05,
+        6.707850843667984e-06,
+        5.70761039853096e-06
+      ],
+      "preaggregate": [
+        3.38749960064888e-05,
+        1.1041760444641113e-05,
+        8.333008736371994e-06
+      ],
+      "semijoin": [
+        1.6250181943178177e-05,
+        3.541819751262665e-06,
+        3.2084062695503235e-06
+      ],
+      "inner": [
+        7.458031177520752e-06,
+        6.668269634246826e-07,
+        5.830079317092896e-07
+      ],
+      "distinct_weight": [
+        1.454213634133339e-05,
+        7.875263690948486e-06,
+        7.62520357966423e-06
+      ]
+    }
+  },
+  {
+    "size": 100,
+    "maximum_child_count": 1,
+    "base_weight": 300,
+    "left_weight": 300,
+    "inner_weight": 0,
+    "eligible_weight": 0,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 300,
+      "preaggregate": 300,
+      "semijoin": 0,
+      "inner": 0,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        1.845788210630417e-05,
+        1.3374723494052887e-05,
+        1.2499745935201645e-05
+      ],
+      "preaggregate": [
+        3.37907113134861e-05,
+        2.1709129214286804e-05,
+        2.116616815328598e-05
+      ],
+      "semijoin": [
+        1.5458092093467712e-05,
+        1.0249670594930649e-05,
+        9.624753147363663e-06
+      ],
+      "inner": [
+        9.458046406507492e-06,
+        5.042180418968201e-06,
+        3.7909485399723053e-06
+      ],
+      "distinct_weight": [
+        1.9333790987730026e-05,
+        1.5041325241327286e-05,
+        1.4459248632192612e-05
+      ]
+    }
+  },
+  {
+    "size": 100,
+    "maximum_child_count": 2,
+    "base_weight": 300,
+    "left_weight": 594,
+    "inner_weight": 492,
+    "eligible_weight": 198,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 594,
+      "preaggregate": 300,
+      "semijoin": 198,
+      "inner": 492,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        2.3582950234413147e-05,
+        1.8500257283449173e-05,
+        1.7083249986171722e-05
+      ],
+      "preaggregate": [
+        3.808271139860153e-05,
+        2.837507054209709e-05,
+        2.787495031952858e-05
+      ],
+      "semijoin": [
+        1.8833205103874207e-05,
+        1.354096457362175e-05,
+        1.2875068932771683e-05
+      ],
+      "inner": [
+        1.708371564745903e-05,
+        1.2291129678487778e-05,
+        1.1874828487634659e-05
+      ],
+      "distinct_weight": [
+        2.6084017008543015e-05,
+        2.0374543964862823e-05,
+        1.9208993762731552e-05
+      ]
+    }
+  },
+  {
+    "size": 100,
+    "maximum_child_count": 4,
+    "base_weight": 300,
+    "left_weight": 1700,
+    "inner_weight": 1600,
+    "eligible_weight": 240,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 1700,
+      "preaggregate": 300,
+      "semijoin": 240,
+      "inner": 1600,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        3.483286127448082e-05,
+        2.866610884666443e-05,
+        2.6625115424394608e-05
+      ],
+      "preaggregate": [
+        4.6708155423402786e-05,
+        3.5249628126621246e-05,
+        3.441609442234039e-05
+      ],
+      "semijoin": [
+        2.0165927708148956e-05,
+        1.4124903827905655e-05,
+        1.3041775673627853e-05
+      ],
+      "inner": [
+        2.8582755476236343e-05,
+        2.420833334326744e-05,
+        2.3916829377412796e-05
+      ],
+      "distinct_weight": [
+        3.645801916718483e-05,
+        3.100000321865082e-05,
+        3.0041206628084183e-05
+      ]
+    }
+  },
+  {
+    "size": 100,
+    "maximum_child_count": 8,
+    "base_weight": 300,
+    "left_weight": 5319,
+    "inner_weight": 5019,
+    "eligible_weight": 232,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 5319,
+      "preaggregate": 300,
+      "semijoin": 232,
+      "inner": 5019,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        6.516696885228157e-05,
+        5.7124998420476913e-05,
+        5.545886233448982e-05
+      ],
+      "preaggregate": [
+        5.0708185881376266e-05,
+        4.158308729529381e-05,
+        4.075001925230026e-05
+      ],
+      "semijoin": [
+        2.200016751885414e-05,
+        1.5916302800178528e-05,
+        1.479126513004303e-05
+      ],
+      "inner": [
+        6.574997678399086e-05,
+        6.041722372174263e-05,
+        5.962466821074486e-05
+      ],
+      "distinct_weight": [
+        7.504085078835487e-05,
+        6.683310493826866e-05,
+        6.600003689527512e-05
+      ]
+    }
+  },
+  {
+    "size": 100,
+    "maximum_child_count": 16,
+    "base_weight": 300,
+    "left_weight": 21906,
+    "inner_weight": 21822,
+    "eligible_weight": 266,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 21906,
+      "preaggregate": 300,
+      "semijoin": 266,
+      "inner": 21822,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        0.00015291711315512657,
+        0.00014741625636816025,
+        0.00014620786532759666
+      ],
+      "preaggregate": [
+        6.212480366230011e-05,
+        4.854099825024605e-05,
+        4.866626113653183e-05
+      ],
+      "semijoin": [
+        2.3624859750270844e-05,
+        1.854216679930687e-05,
+        1.7916783690452576e-05
+      ],
+      "inner": [
+        0.00019637495279312134,
+        0.00019229203462600708,
+        0.0001965831033885479
+      ],
+      "distinct_weight": [
+        0.0001982497051358223,
+        0.00019179191440343857,
+        0.00019175000488758087
+      ]
+    }
+  },
+  {
+    "size": 1000,
+    "maximum_child_count": 0,
+    "base_weight": 3000,
+    "left_weight": 3000,
+    "inner_weight": 0,
+    "eligible_weight": 0,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 3000,
+      "preaggregate": 3000,
+      "semijoin": 0,
+      "inner": 0,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        5.179131403565407e-05,
+        4.737498238682747e-05,
+        4.7083012759685516e-05
+      ],
+      "preaggregate": [
+        5.7625118643045425e-05,
+        4.666624590754509e-05,
+        4.554120823740959e-05
+      ],
+      "semijoin": [
+        3.22503037750721e-05,
+        2.670893445611e-05,
+        2.6875175535678864e-05
+      ],
+      "inner": [
+        3.832858055830002e-06,
+        6.249174475669861e-07,
+        5.41098415851593e-07
+      ],
+      "distinct_weight": [
+        6.174994632601738e-05,
+        5.924981087446213e-05,
+        5.833432078361511e-05
+      ]
+    }
+  },
+  {
+    "size": 1000,
+    "maximum_child_count": 1,
+    "base_weight": 3000,
+    "left_weight": 3000,
+    "inner_weight": 0,
+    "eligible_weight": 0,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 3000,
+      "preaggregate": 3000,
+      "semijoin": 0,
+      "inner": 0,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        0.00013558333739638329,
+        0.0001554582267999649,
+        0.00015779118984937668
+      ],
+      "preaggregate": [
+        0.00021595880389213562,
+        0.00020012492313981056,
+        0.00020433403551578522
+      ],
+      "semijoin": [
+        0.00011991569772362709,
+        0.0001132078468799591,
+        0.00011674966663122177
+      ],
+      "inner": [
+        5.791708827018738e-05,
+        5.804188549518585e-05,
+        5.704117938876152e-05
+      ],
+      "distinct_weight": [
+        0.00018566614016890526,
+        0.00017650006338953972,
+        0.0001755421981215477
+      ]
+    }
+  },
+  {
+    "size": 1000,
+    "maximum_child_count": 2,
+    "base_weight": 3000,
+    "left_weight": 5994,
+    "inner_weight": 4992,
+    "eligible_weight": 1998,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 5994,
+      "preaggregate": 3000,
+      "semijoin": 1998,
+      "inner": 4992,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        0.00023816712200641632,
+        0.0002210000529885292,
+        0.00021650036796927452
+      ],
+      "preaggregate": [
+        0.0003136657178401947,
+        0.0002765841782093048,
+        0.00027679139748215675
+      ],
+      "semijoin": [
+        0.00013945810496807098,
+        0.00014158384874463081,
+        0.00014012493193149567
+      ],
+      "inner": [
+        0.00014333287253975868,
+        0.0001393747515976429,
+        0.00014091609045863152
+      ],
+      "distinct_weight": [
+        0.00023300014436244965,
+        0.00024029193446040154,
+        0.00023570889607071877
+      ]
+    }
+  },
+  {
+    "size": 1000,
+    "maximum_child_count": 4,
+    "base_weight": 3000,
+    "left_weight": 17000,
+    "inner_weight": 16000,
+    "eligible_weight": 2400,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 17000,
+      "preaggregate": 3000,
+      "semijoin": 2400,
+      "inner": 16000,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        0.0003249160945415497,
+        0.0003221672959625721,
+        0.0003194171003997326
+      ],
+      "preaggregate": [
+        0.0003477088175714016,
+        0.0003427499905228615,
+        0.000337124802172184
+      ],
+      "semijoin": [
+        0.00015962496399879456,
+        0.00015633413568139076,
+        0.0001515829935669899
+      ],
+      "inner": [
+        0.00026245787739753723,
+        0.0002843332476913929,
+        0.000272165983915329
+      ],
+      "distinct_weight": [
+        0.0003988752141594887,
+        0.0003797500394284725,
+        0.00037279166281223297
+      ]
+    }
+  },
+  {
+    "size": 1000,
+    "maximum_child_count": 8,
+    "base_weight": 3000,
+    "left_weight": 53019,
+    "inner_weight": 50019,
+    "eligible_weight": 2332,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 53019,
+      "preaggregate": 3000,
+      "semijoin": 2332,
+      "inner": 50019,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        0.0006362497806549072,
+        0.0006480840966105461,
+        0.0006519174203276634
+      ],
+      "preaggregate": [
+        0.0004309173673391342,
+        0.00041791703552007675,
+        0.0004225000739097595
+      ],
+      "semijoin": [
+        0.00018312502652406693,
+        0.00017958367243409157,
+        0.0001715407706797123
+      ],
+      "inner": [
+        0.0007834997959434986,
+        0.0006837081164121628,
+        0.000693832989782095
+      ],
+      "distinct_weight": [
+        0.0008461247198283672,
+        0.0008176248520612717,
+        0.0007726671174168587
+      ]
+    }
+  },
+  {
+    "size": 1000,
+    "maximum_child_count": 16,
+    "base_weight": 3000,
+    "left_weight": 215778,
+    "inner_weight": 214892,
+    "eligible_weight": 2645,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 215778,
+      "preaggregate": 3000,
+      "semijoin": 2645,
+      "inner": 214892,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        0.0018828329630196095,
+        0.001926665659993887,
+        0.0018331659957766533
+      ],
+      "preaggregate": [
+        0.0006567905656993389,
+        0.0005484158173203468,
+        0.0005305418744683266
+      ],
+      "semijoin": [
+        0.00021866708993911743,
+        0.00019912514835596085,
+        0.00020120898261666298
+      ],
+      "inner": [
+        0.0022843750193715096,
+        0.002172958105802536,
+        0.002145749982446432
+      ],
+      "distinct_weight": [
+        0.0021550841629505157,
+        0.002066708169877529,
+        0.00207558274269104
+      ]
+    }
+  },
+  {
+    "size": 10000,
+    "maximum_child_count": 0,
+    "base_weight": 30000,
+    "left_weight": 30000,
+    "inner_weight": 0,
+    "eligible_weight": 0,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 30000,
+      "preaggregate": 30000,
+      "semijoin": 0,
+      "inner": 0,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        0.0004375842399895191,
+        0.00042166607454419136,
+        0.00042691733688116074
+      ],
+      "preaggregate": [
+        0.0004481659270823002,
+        0.00041229184716939926,
+        0.0004153749905526638
+      ],
+      "semijoin": [
+        0.00025641731917858124,
+        0.0002508326433598995,
+        0.00025229156017303467
+      ],
+      "inner": [
+        7.417052984237671e-06,
+        6.663613021373749e-07,
+        5.41098415851593e-07
+      ],
+      "distinct_weight": [
+        0.0005760421045124531,
+        0.0005728327669203281,
+        0.0006056670099496841
+      ]
+    }
+  },
+  {
+    "size": 10000,
+    "maximum_child_count": 1,
+    "base_weight": 30000,
+    "left_weight": 30000,
+    "inner_weight": 0,
+    "eligible_weight": 0,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 30000,
+      "preaggregate": 30000,
+      "semijoin": 0,
+      "inner": 0,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        0.0015124590136110783,
+        0.0015582088381052017,
+        0.0015071253292262554
+      ],
+      "preaggregate": [
+        0.002380209043622017,
+        0.002457208000123501,
+        0.0024123750627040863
+      ],
+      "semijoin": [
+        0.0011584577150642872,
+        0.0011275829747319221,
+        0.0011296668089926243
+      ],
+      "inner": [
+        0.0005816253833472729,
+        0.0006013340316712856,
+        0.0006122910417616367
+      ],
+      "distinct_weight": [
+        0.0018664998933672905,
+        0.0017534592188894749,
+        0.0018104170449078083
+      ]
+    }
+  },
+  {
+    "size": 10000,
+    "maximum_child_count": 2,
+    "base_weight": 30000,
+    "left_weight": 59994,
+    "inner_weight": 49992,
+    "eligible_weight": 19998,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 59994,
+      "preaggregate": 30000,
+      "semijoin": 19998,
+      "inner": 49992,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        0.002213417086750269,
+        0.0021905829198658466,
+        0.0022403751499950886
+      ],
+      "preaggregate": [
+        0.0036878748796880245,
+        0.0032709999941289425,
+        0.003256749827414751
+      ],
+      "semijoin": [
+        0.0015081660822033882,
+        0.0015331660397350788,
+        0.0014790422283113003
+      ],
+      "inner": [
+        0.0015041250735521317,
+        0.001448208000510931,
+        0.0014309999532997608
+      ],
+      "distinct_weight": [
+        0.0025375420227646828,
+        0.00248204218223691,
+        0.002456875052303076
+      ]
+    }
+  },
+  {
+    "size": 10000,
+    "maximum_child_count": 4,
+    "base_weight": 30000,
+    "left_weight": 170000,
+    "inner_weight": 160000,
+    "eligible_weight": 24000,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 170000,
+      "preaggregate": 30000,
+      "semijoin": 24000,
+      "inner": 160000,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        0.0034599588252604008,
+        0.0035351673141121864,
+        0.003547624684870243
+      ],
+      "preaggregate": [
+        0.004172916058450937,
+        0.0040622917003929615,
+        0.004111750051379204
+      ],
+      "semijoin": [
+        0.0016871253028512,
+        0.0016240840777754784,
+        0.0015811249613761902
+      ],
+      "inner": [
+        0.0028810841031372547,
+        0.002773124724626541,
+        0.002711040899157524
+      ],
+      "distinct_weight": [
+        0.0037130829878151417,
+        0.003665165975689888,
+        0.0036781253293156624
+      ]
+    }
+  },
+  {
+    "size": 10000,
+    "maximum_child_count": 8,
+    "base_weight": 30000,
+    "left_weight": 530019,
+    "inner_weight": 500019,
+    "eligible_weight": 23332,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 530019,
+      "preaggregate": 30000,
+      "semijoin": 23332,
+      "inner": 500019,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        0.00682770786806941,
+        0.007047166116535664,
+        0.0069619156420230865
+      ],
+      "preaggregate": [
+        0.0049702078104019165,
+        0.004728040657937527,
+        0.004742874763906002
+      ],
+      "semijoin": [
+        0.0019601252861320972,
+        0.0019150828011333942,
+        0.0018823333084583282
+      ],
+      "inner": [
+        0.007166250143200159,
+        0.007063790690153837,
+        0.007241084240376949
+      ],
+      "distinct_weight": [
+        0.008077624719589949,
+        0.00795524986460805,
+        0.008005207870155573
+      ]
+    }
+  },
+  {
+    "size": 10000,
+    "maximum_child_count": 16,
+    "base_weight": 30000,
+    "left_weight": 2167934,
+    "inner_weight": 2159098,
+    "eligible_weight": 26465,
+    "distinct_weight": 15,
+    "answers": {
+      "left": 2167934,
+      "preaggregate": 30000,
+      "semijoin": 26465,
+      "inner": 2159098,
+      "distinct_weight": 15
+    },
+    "sql": {
+      "left": "SELECT SUM(w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)",
+      "preaggregate": "SELECT SUM(w) FROM b LEFT JOIN (SELECT DISTINCT id FROM x) x USING(id) LEFT JOIN (SELECT DISTINCT id FROM y) y USING(id)",
+      "semijoin": "SELECT SUM(w) FROM b WHERE EXISTS (SELECT 1 FROM x WHERE x.id=b.id) AND EXISTS (SELECT 1 FROM y WHERE y.id=b.id)",
+      "inner": "SELECT SUM(w) FROM b JOIN x USING(id) JOIN y USING(id)",
+      "distinct_weight": "SELECT SUM(DISTINCT w) FROM b LEFT JOIN x USING(id) LEFT JOIN y USING(id)"
+    },
+    "timings_seconds": {
+      "left": [
+        0.017114500049501657,
+        0.017394582740962505,
+        0.017247499898076057
+      ],
+      "preaggregate": [
+        0.006044458132237196,
+        0.005844250321388245,
+        0.005693541839718819
+      ],
+      "semijoin": [
+        0.0021906662732362747,
+        0.0020832079462707043,
+        0.002061166800558567
+      ],
+      "inner": [
+        0.022249875124543905,
+        0.021911959163844585,
+        0.021950750146061182
+      ],
+      "distinct_weight": [
+        0.021464791148900986,
+        0.021113417111337185,
+        0.02137208404019475
+      ]
+    }
+  }
+]

@@ -1,0 +1,22 @@
+Historical processed MusicBrainz producer-credit relation
+(data/producer_recs.csv.gz): retained under the source package's prior
+supplementary-relationship notice, CC BY-NC-SA 3.0; the current
+primary-source classification of MusicBrainz relationship data is CC0.
+The exact upstream dump and original extraction commands are absent from the
+source package, so this relation is replayed as supplied.
+https://musicbrainz.org/doc/About/Data_License
+
+AcousticBrainz submission metadata and feature values
+(data/submission_metadata.npz, data/artist_features83.npz,
+data/first_dyad_metadata.json): CC0.  https://acousticbrainz.org/
+The submission sample upstream dump is pinned in data/SOURCES.json.
+
+The regulatory reduction (transfer/data/schema_aware_records.parquet) is
+publicly derived moderation-record data; its source terms are recorded in
+transfer/LICENSES.json.
+
+numpy 2.5.3, pandas 3.0.5 and pyarrow 26.0.0 are installed external
+dependencies and are not vendored.
+
+No blanket code license was present in the source package; no new license
+grant is inferred over third-party material.

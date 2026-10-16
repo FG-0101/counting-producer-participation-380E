@@ -1,0 +1,31 @@
+{
+  "producer_credits": {
+    "file": "producer_recs.csv.gz",
+    "rows": 804781,
+    "sha256": "482fb3d3d6c290c9aefba7fcea378ae7368d8a1117a8ce3e8e8b89539a794058",
+    "provenance": "Historical processed MusicBrainz producer-credit relation retained in the workflow. Rows retain their original order and values.",
+    "license": "CC BY-NC-SA 3.0 for the supplementary relationship data",
+    "upstream": "https://musicbrainz.org/doc/About/Data_License"
+  },
+  "submissions": {
+    "file": "submission_metadata.npz",
+    "rows": 100000,
+    "recordings": 88816,
+    "retained_arrays": [
+      "mbid",
+      "offset"
+    ],
+    "source_metadata_sha256": "fcc5a283b77b0193f40ab96017f7d2e96424796d9c062ba94dfcd4c48d7909d3",
+    "upstream": "https://data.metabrainz.org/pub/musicbrainz/acousticbrainz/dumps/acousticbrainz-sample-json-20220623/acousticbrainz-lowlevel-sample-json-20220623-0.tar.zst",
+    "license": "CC0"
+  },
+  "artist_features": {
+    "file": "artist_features83.npz",
+    "rows": 27,
+    "columns": 83,
+    "selection": "All feature-archive recordings belonging to the prespecified artist credit rows. Original array-row indices retained.",
+    "source_archive_sha256": "f452dd4a22400a97a04828606295234b315e430b9e0c738faec2ca62c3e458f6",
+    "upstream": "https://acousticbrainz.org/",
+    "license": "CC0"
+  }
+}

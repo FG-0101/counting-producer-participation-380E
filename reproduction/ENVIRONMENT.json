@@ -1,0 +1,10 @@
+{
+  "OS": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "Python": "Python 3.14.8",
+  "Third-party Python packages": "numpy 2.5.3, pandas 3.0.5, pyarrow 26.0.0",
+  "Measured complete-run seconds": 16.0,
+  "Generated run bytes": 45606730,
+  "CPU seconds per child": 120,
+  "Child priority nice increment": 15,
+  "Random seeds": "None consumed: every stage is deterministic integer and SQL arithmetic (transfer/code/experiment.py defines SEED 20261011 but does not use it)"
+}

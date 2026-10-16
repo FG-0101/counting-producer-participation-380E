@@ -1,0 +1,14 @@
+Paper item	Program	Line	Output	Input
+Table 1 (tab:input)	code/run_granularity.py	79	results/granularity/results.json	data/producer_recs.csv.gz, data/submission_metadata.npz
+Table 2 (tab:join)	code/run_granularity.py	89	results/granularity/results.json	data/producer_recs.csv.gz, data/submission_metadata.npz
+Equation (eq:count), 23,473 -> 28,522 = 21.51%	code/run_granularity.py	88	results/granularity/results.json	data/producer_recs.csv.gz, data/submission_metadata.npz
+Table 3 (tab:regulatory-joins)	transfer/code/experiment.py	59	results/transfer/counting_units_regulatory_transfer.json	transfer/data/schema_aware_records.parquet
+Multiple-producer participation example	code/run_granularity.py	130	results/granularity/legal_multi_producer_example.json	data/producer_recs.csv.gz
+Repeated-credit counterexample	code/run_granularity.py	147	results/granularity/real_counterexample.json	data/producer_recs.csv.gz, data/submission_metadata.npz
+Music distinct-key and child-preaggregation rewrites	code/run_granularity.py	112	results/granularity/music_rewrite_verification.json	data/producer_recs.csv.gz, data/submission_metadata.npz
+Artist-year and producer-exclusion reference membership	code/run_support.py	65	results/support/results.json	data/producer_recs.csv.gz, data/artist_features83.npz
+Credited-year and temporal membership examples	code/minimal_cases.py	69	results/minimal_cases.json	data/first_dyad_metadata.json
+Regulatory leave-one-cell and leave-one-platform membership	transfer/code/experiment.py	58	results/transfer/counting_units_all_reference_memberships.json	transfer/data/schema_aware_records.parquet
+Regulatory reference group register	transfer/reproduce.py	24	results/transfer/reference_group_register.json	transfer/data/schema_aware_records.parquet
+Supplement fixtures (app:m3-fixtures)	transfer/code/controls.py	23	results/transfer/counting_units_scaling_controls.json	constructed in code (in-memory SQLite)
+Predicate-placement fixture	transfer/code/controls.py	26	results/transfer/counting_units_filter_fixture.json	constructed in code (in-memory SQLite)

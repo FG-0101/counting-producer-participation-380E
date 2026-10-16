@@ -1,0 +1,123 @@
+{
+  "source": "schema_aware_records.parquet",
+  "source_sha256": "7b7759cf5ab5625a05996dbd04ac6948015fc0a44dd10eb0a4003a714018f927",
+  "aggregate_cells": 43094,
+  "represented_record_rows": 1339503336,
+  "keyword_edges": 16703,
+  "category_addition_edges": 1630,
+  "left_join_weighted_records": 1339595639,
+  "left_join_extra_weight": 92303,
+  "both_children_eligible_record_rows": 6837,
+  "inner_join_weighted_records": 9558,
+  "tests": [
+    {
+      "name": "source_records",
+      "query": "SELECT SUM(n) FROM r",
+      "answer": 1339503336,
+      "seconds": [
+        0.0009065000340342522,
+        0.0008743340149521828,
+        0.0008818749338388443,
+        0.0008720830082893372,
+        0.0008767088875174522
+      ],
+      "median_seconds": 0.0008767088875174522
+    },
+    {
+      "name": "naive_two_child_left_join",
+      "query": "SELECT SUM(r.n) FROM r LEFT JOIN keyword k USING(id) LEFT JOIN category_addition c USING(id)",
+      "answer": 1339595639,
+      "seconds": [
+        0.006321166642010212,
+        0.006248833145946264,
+        0.006121625192463398,
+        0.0061070420779287815,
+        0.006266792304813862
+      ],
+      "median_seconds": 0.006248833145946264
+    },
+    {
+      "name": "preaggregate_left_join",
+      "query": "SELECT SUM(r.n) FROM r LEFT JOIN (SELECT DISTINCT id FROM keyword) k USING(id) LEFT JOIN (SELECT DISTINCT id FROM category_addition) c USING(id)",
+      "answer": 1339503336,
+      "seconds": [
+        0.006513542030006647,
+        0.006776791997253895,
+        0.006438292097300291,
+        0.006263833958655596,
+        0.006381084211170673
+      ],
+      "median_seconds": 0.006438292097300291
+    },
+    {
+      "name": "deduplicate_cell_after_left_join",
+      "query": "SELECT SUM(n) FROM (SELECT r.id,MAX(r.n) n FROM r LEFT JOIN keyword k USING(id) LEFT JOIN category_addition c USING(id) GROUP BY r.id)",
+      "answer": 1339503336,
+      "seconds": [
+        0.008975249715149403,
+        0.008834625128656626,
+        0.008929250296205282,
+        0.009358124807476997,
+        0.008993040770292282
+      ],
+      "median_seconds": 0.008975249715149403
+    },
+    {
+      "name": "sum_distinct_weight",
+      "query": "SELECT SUM(DISTINCT r.n) FROM r LEFT JOIN keyword k USING(id) LEFT JOIN category_addition c USING(id)",
+      "answer": 1327433064,
+      "seconds": [
+        0.009987999685108662,
+        0.009827707894146442,
+        0.009757332969456911,
+        0.010239666793495417,
+        0.010191124863922596
+      ],
+      "median_seconds": 0.009987999685108662
+    },
+    {
+      "name": "count_distinct_cell",
+      "query": "SELECT COUNT(DISTINCT r.id) FROM r LEFT JOIN keyword k USING(id) LEFT JOIN category_addition c USING(id)",
+      "answer": 43094,
+      "seconds": [
+        0.0061896247789263725,
+        0.006319582927972078,
+        0.006295375060290098,
+        0.006656916346400976,
+        0.00652829185128212
+      ],
+      "median_seconds": 0.006319582927972078
+    },
+    {
+      "name": "naive_two_child_inner_join",
+      "query": "SELECT SUM(r.n) FROM r JOIN keyword k USING(id) JOIN category_addition c USING(id)",
+      "answer": 9558,
+      "seconds": [
+        0.0023509161546826363,
+        0.002192332874983549,
+        0.002182707656174898,
+        0.002224915660917759,
+        0.002116041723638773
+      ],
+      "median_seconds": 0.002192332874983549
+    },
+    {
+      "name": "eligible_source_semijoin",
+      "query": "SELECT SUM(n) FROM r WHERE EXISTS (SELECT 1 FROM keyword k WHERE k.id=r.id) AND EXISTS (SELECT 1 FROM category_addition c WHERE c.id=r.id)",
+      "answer": 6837,
+      "seconds": [
+        0.0045755840837955475,
+        0.004586250055581331,
+        0.004765583202242851,
+        0.004432834219187498,
+        0.00458604097366333
+      ],
+      "median_seconds": 0.00458604097366333
+    }
+  ],
+  "reference_groups": 1127,
+  "eligible_leave_one_cell_cases": 43022,
+  "retaining_focal_platform_cases": 14869,
+  "empty_after_platform_exclusion_cases": 0,
+  "counting_unit": "A reduced cell represents n source CSV rows. Cell ID is not a source statement ID. Results concern record-row weights and declared aggregate-cell membership."
+}
